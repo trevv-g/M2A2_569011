@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Registro para Torneo de Videojuegos</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 30px;
+    }
+    table {
+      border-collapse: collapse;
+      margin-bottom: 12px;
+    }
+    td {
+      padding: 6px 10px;
+    }
+    .acciones {
+      margin-top: 8px;
+    }
+  </style>
+</head>
+<body>
+
+  <form action="#" method="POST">
+    <table border="1">
+      <!-- Fila 1: Nombre del jugador -->
+      <tr>
+        <td><label for="nombre">Nombre del jugador:</label></td>
+        <td>
+          <input type="text" id="nombre" name="nombre" minlength="3" maxlength="15" required>
+        </td>
+      </tr>
+
+      <!-- Fila 2: Correo electrónico -->
+      <tr>
+        <td><label for="correo">Correo:</label></td>
+        <td>
+          <input type="email" id="correo" name="correo" required>
+        </td>
+      </tr>
+
+      <!-- Fila 3: Edad -->
+      <tr>
+        <td><label for="edad">Edad:</label></td>
+        <td>
+          <input type="number" id="edad" name="edad" min="12" max="40" required>
+        </td>
+      </tr>
+
+      <!-- Fila 4: Nickname en el juego -->
+      <tr>
+        <td><label for="nickname">Nickname:</label></td>
+        <td>
+          <input type="text" id="nickname" name="nickname" pattern="[A-Za-z0-9]+" title="Solo letras y números sin espacios ni caracteres especiales" required>
+        </td>
+      </tr>
+
+      <!-- Fila 5: Categoría (radio buttons) -->
+      <tr>
+        <td>Categoria:</td>
+        <td>
+          <input type="radio" id="cat-principiante" name="categoria" value="Principiante" required>
+          <label for="cat-principiante">Principiante</label>
+
+          <input type="radio" id="cat-intermedio" name="categoria" value="Intermedio">
+          <label for="cat-intermedio">Intermedio</label>
+
+          <input type="radio" id="cat-experto" name="categoria" value="Experto">
+          <label for="cat-experto">Experto</label>
+        </td>
+      </tr>
+
+      <!-- Fila 6: Juegos favoritos (checkboxes) -->
+      <tr>
+        <td>Juegos favoritos:</td>
+        <td>
+          <input type="checkbox" id="juego-fifa" name="juegos" value="FIFA">
+          <label for="juego-fifa">FIFA</label>
+
+          <input type="checkbox" id="juego-lol" name="juegos" value="LoL">
+          <label for="juego-lol">LoL</label>
+
+          <input type="checkbox" id="juego-minecraft" name="juegos" value="Minecraft">
+          <label for="juego-minecraft">Minecraft</label>
+        </td>
+      </tr>
+
+      <!-- Fila 7: Fecha de inscripción -->
+      <tr>
+        <td><label for="fecha">Fecha inscripción:</label></td>
+        <td>
+          <input type="date" id="fecha" name="fecha" min="2025-01-01" max="2025-12-31" required>
+        </td>
+      </tr>
+    </table>
+
+    <!-- Botones de Enviar y Restablecer -->
+    <div class="acciones">
+      <input type="submit" value="Enviar">
+      <input type="reset" value="Restablecer">
+    </div>
+  </form>
+
+</body>
+</html>
